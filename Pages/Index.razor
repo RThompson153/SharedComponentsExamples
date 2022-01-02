@@ -1,0 +1,72 @@
+﻿@page "/"
+
+@using SharedComponents
+
+<div class="row">
+	<div class="item-pool col-6">
+		@foreach(var item in _itemPool)
+		{
+			<DropItem Item="@item" />
+		}
+	</div>
+
+	<div class="col-6 p-0" style="min-height: 100px; height: 100px;">
+		<DropZone Class="@($"w-100 bg-secondary border border-dark {_dzClass}")" DragOver="dragOver" DragLeave="dragLeave" Drop="drop" DropItem="replaceItem"></DropZone>
+	</div>
+	
+</div>
+
+@code{
+	private string _dzClass = "";
+
+	private IEnumerable<DraggableItem> _itemPool;
+
+	protected override async Task OnInitializedAsync()
+	{
+		_itemPool = new List<DraggableItem>
+		{
+			new DraggableItem
+			{
+				Id = 1,
+				Title = "First Item"
+			},
+			new DraggableItem
+			{
+				Id = 2,
+				Title = "Second Item",
+				Items = new List<DraggableItem>
+				{
+					new DraggableItem
+					{
+						Id = 21,
+						Title = "Second Item, First sub-item"
+					}
+				}
+			}
+		};
+	}
+
+	private void dragOver() => _dzClass = "bg-primary";
+
+	private void dragLeave() => _dzClass = "";
+
+	private void drop(DraggableItem tgt)
+	{
+		var itemPool = _itemPool.ToList();
+
+		itemPool.Remove(tgt);
+
+		_itemPool = itemPool;
+
+		_dzClass = "";
+	}
+
+	private void replaceItem(DraggableItem tgt)
+	{
+		var itemPool = _itemPool.ToList();
+
+		itemPool.Remove(tgt);
+
+		_itemPool = itemPool;
+	}
+}
