@@ -13,78 +13,85 @@ namespace BlazorComponents.Shared
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "F:\Projects\Site\_Imports.razor"
+#line 1 "F:\Projects\SharedComponentsExamples\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "F:\Projects\Site\_Imports.razor"
+#line 2 "F:\Projects\SharedComponentsExamples\_Imports.razor"
 using System.Net.Http.Json;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "F:\Projects\Site\_Imports.razor"
+#line 3 "F:\Projects\SharedComponentsExamples\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "F:\Projects\Site\_Imports.razor"
+#line 4 "F:\Projects\SharedComponentsExamples\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "F:\Projects\Site\_Imports.razor"
+#line 5 "F:\Projects\SharedComponentsExamples\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "F:\Projects\Site\_Imports.razor"
+#line 6 "F:\Projects\SharedComponentsExamples\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "F:\Projects\Site\_Imports.razor"
+#line 7 "F:\Projects\SharedComponentsExamples\_Imports.razor"
 using Microsoft.AspNetCore.Components.WebAssembly.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "F:\Projects\Site\_Imports.razor"
+#line 8 "F:\Projects\SharedComponentsExamples\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "F:\Projects\Site\_Imports.razor"
+#line 9 "F:\Projects\SharedComponentsExamples\_Imports.razor"
 using BlazorComponents;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "F:\Projects\Site\_Imports.razor"
+#line 10 "F:\Projects\SharedComponentsExamples\_Imports.razor"
 using BlazorComponents.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "F:\Projects\Site\_Imports.razor"
+#line 11 "F:\Projects\SharedComponentsExamples\_Imports.razor"
 using SharedComponents;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 12 "F:\Projects\SharedComponentsExamples\_Imports.razor"
+using SharedComponents.DragAndDrop;
 
 #line default
 #line hidden
@@ -97,7 +104,7 @@ using SharedComponents;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "F:\Projects\Site\Shared\NavMenu.razor"
+#line 28 "F:\Projects\SharedComponentsExamples\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

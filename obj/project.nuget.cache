@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Tw5/LV1FHZQu/mOJflDHfqj+rq/CcfmfaJDsOT8PNomyXpPtIAbEXRyGSqp+XKUgc/OjZfc/NHyIG/N1B8JPsw==",
+  "dgSpecHash": "fI4wbcCMrJubOh1HCN46fnfilj4hv0kjwLJ8d3XUkkuQDxUQEBfYaksmX0AILrDFR7c596IH2aCD7c6fX0EjHQ==",
   "success": true,
-  "projectFilePath": "F:\\Projects\\Site\\BlazorComponents.csproj",
+  "projectFilePath": "F:\\Projects\\SharedComponentsExamples\\BlazorComponents.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Home\\.nuget\\packages\\microsoft.aspnetcore.authorization\\5.0.7\\microsoft.aspnetcore.authorization.5.0.7.nupkg.sha512",
     "C:\\Users\\Home\\.nuget\\packages\\microsoft.aspnetcore.components\\5.0.7\\microsoft.aspnetcore.components.5.0.7.nupkg.sha512",
@@ -30,7 +30,7 @@
     "C:\\Users\\Home\\.nuget\\packages\\microsoft.jsinterop.webassembly\\5.0.7\\microsoft.jsinterop.webassembly.5.0.7.nupkg.sha512",
     "C:\\Users\\Home\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512",
     "C:\\Users\\Home\\.nuget\\packages\\blazorsharedcomponents\\1.1.0\\blazorsharedcomponents.1.1.0.nupkg.sha512",
-    "C:\\Users\\Home\\.nuget\\packages\\microsoft.netcore.app.runtime.browser-wasm\\5.0.13\\microsoft.netcore.app.runtime.browser-wasm.5.0.13.nupkg.sha512"
+    "C:\\Users\\Home\\.nuget\\packages\\microsoft.netcore.app.runtime.browser-wasm\\5.0.15\\microsoft.netcore.app.runtime.browser-wasm.5.0.15.nupkg.sha512"
   ],
   "logs": []
 }

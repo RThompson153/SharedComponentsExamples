@@ -10,4 +10,4 @@ build_property.EnableSingleFileAnalyzer =
 build_property.EnableTrimAnalyzer = true
 build_property.IncludeAllContentForSelfExtract = 
 build_property.RootNamespace = BlazorComponents
-build_property.ProjectDir = F:\Projects\Site\
+build_property.ProjectDir = F:\Projects\SharedComponentsExamples\

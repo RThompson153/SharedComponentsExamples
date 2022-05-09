@@ -13,77 +13,84 @@ namespace BlazorComponents.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "F:\Projects\Site\_Imports.razor"
+#line 1 "F:\Projects\SharedComponentsExamples\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "F:\Projects\Site\_Imports.razor"
+#line 2 "F:\Projects\SharedComponentsExamples\_Imports.razor"
 using System.Net.Http.Json;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "F:\Projects\Site\_Imports.razor"
+#line 3 "F:\Projects\SharedComponentsExamples\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "F:\Projects\Site\_Imports.razor"
+#line 4 "F:\Projects\SharedComponentsExamples\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "F:\Projects\Site\_Imports.razor"
+#line 5 "F:\Projects\SharedComponentsExamples\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "F:\Projects\Site\_Imports.razor"
+#line 6 "F:\Projects\SharedComponentsExamples\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "F:\Projects\Site\_Imports.razor"
+#line 7 "F:\Projects\SharedComponentsExamples\_Imports.razor"
 using Microsoft.AspNetCore.Components.WebAssembly.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "F:\Projects\Site\_Imports.razor"
+#line 8 "F:\Projects\SharedComponentsExamples\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "F:\Projects\Site\_Imports.razor"
+#line 9 "F:\Projects\SharedComponentsExamples\_Imports.razor"
 using BlazorComponents;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "F:\Projects\Site\_Imports.razor"
+#line 10 "F:\Projects\SharedComponentsExamples\_Imports.razor"
 using BlazorComponents.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "F:\Projects\Site\Pages\Index.razor"
+#line 12 "F:\Projects\SharedComponentsExamples\_Imports.razor"
+using SharedComponents.DragAndDrop;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "F:\Projects\SharedComponentsExamples\Pages\Index.razor"
 using SharedComponents;
 
 #line default
@@ -98,33 +105,25 @@ using SharedComponents;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 19 "F:\Projects\Site\Pages\Index.razor"
+#line 19 "F:\Projects\SharedComponentsExamples\Pages\Index.razor"
       
 	private string _dzClass = "";
 
-	private IEnumerable<DraggableItem> _itemPool;
+	private IEnumerable<DragAndDropItem> _itemPool;
 
 	protected override async Task OnInitializedAsync()
 	{
-		_itemPool = new List<DraggableItem>
+		_itemPool = new List<DragAndDropItem>
 		{
-			new DraggableItem
+			new DragAndDropItem
 			{
 				Id = 1,
 				Title = "First Item"
 			},
-			new DraggableItem
+			new DragAndDropItem
 			{
 				Id = 2,
 				Title = "Second Item",
-				Items = new List<DraggableItem>
-				{
-					new DraggableItem
-					{
-						Id = 21,
-						Title = "Second Item, First sub-item"
-					}
-				}
 			}
 		};
 	}
@@ -133,7 +132,7 @@ using SharedComponents;
 
 	private void dragLeave() => _dzClass = "";
 
-	private void drop(DraggableItem tgt)
+	private void drop(DragAndDropItem tgt)
 	{
 		var itemPool = _itemPool.ToList();
 
@@ -144,7 +143,7 @@ using SharedComponents;
 		_dzClass = "";
 	}
 
-	private void replaceItem(DraggableItem tgt)
+	private void replaceItem(DragAndDropItem tgt)
 	{
 		var itemPool = _itemPool.ToList();
 
