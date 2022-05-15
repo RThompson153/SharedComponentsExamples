@@ -11,13 +11,13 @@
 	</div>
 
 	<div class="col-6 p-0" style="min-height: 100px; height: 100px;">
-		<DropZone Class="@($"d-flex bg-light border border-dark {_dzClass}")" DZText="@_dzText" DragOver="dragOver" DragLeave="dragLeave" Drop="drop"></DropZone>
+		<DropZone Class="@($"border border-dark {_dzClass}")" DZText="@_dzText" DragOver="dragOver" DragLeave="dragLeave" Drop="drop"></DropZone>
 	</div>
 	
 </div>
 
 @code{
-	private string _dzClass = "";
+	private string _dzClass = "bg-light";
 	private string _dzText = "";
 
 	private IEnumerable<DragAndDropItem> _itemPool;
