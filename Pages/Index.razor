@@ -11,46 +11,48 @@
 	</div>
 
 	<div class="col-6 p-0" style="min-height: 100px; height: 100px;">
-		<DropZone Class="@($"w-100 bg-secondary border border-dark {_dzClass}")" DragOver="dragOver" DragLeave="dragLeave" Drop="drop" DropItem="replaceItem"></DropZone>
+		<DropZone Class="@($"d-flex bg-light border border-dark {_dzClass}")" DZText="@_dzText" DragOver="dragOver" DragLeave="dragLeave" Drop="drop"></DropZone>
 	</div>
 	
 </div>
 
 @code{
 	private string _dzClass = "";
+	private string _dzText = "";
 
-	private IEnumerable<DraggableItem> _itemPool;
+	private IEnumerable<DragAndDropItem> _itemPool;
 
 	protected override async Task OnInitializedAsync()
 	{
-		_itemPool = new List<DraggableItem>
+		_dzText = "Drop Here";
+
+		_itemPool = new List<DragAndDropItem>
 		{
-			new DraggableItem
+			new DragAndDropItem
 			{
 				Id = 1,
 				Title = "First Item"
 			},
-			new DraggableItem
+			new DragAndDropItem
 			{
 				Id = 2,
 				Title = "Second Item",
-				Items = new List<DraggableItem>
-				{
-					new DraggableItem
-					{
-						Id = 21,
-						Title = "Second Item, First sub-item"
-					}
-				}
 			}
 		};
 	}
 
-	private void dragOver() => _dzClass = "bg-primary";
+	private void dragOver()
+	{
+		_dzClass = "bg-primary";
+	}
 
-	private void dragLeave() => _dzClass = "";
+	private void dragLeave()
+	{
+		_dzClass = "";
+		_dzText = "";
+	}
 
-	private void drop(DraggableItem tgt)
+	private void drop(DragAndDropItem tgt)
 	{
 		var itemPool = _itemPool.ToList();
 
@@ -59,14 +61,6 @@
 		_itemPool = itemPool;
 
 		_dzClass = "";
-	}
-
-	private void replaceItem(DraggableItem tgt)
-	{
-		var itemPool = _itemPool.ToList();
-
-		itemPool.Remove(tgt);
-
-		_itemPool = itemPool;
+		_dzText = "";
 	}
 }
