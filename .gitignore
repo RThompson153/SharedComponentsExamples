@@ -1,4 +1,6 @@
 *.suo
 *.user
-bin
-obj
+*.vs
+bin/
+obj/
+packages
