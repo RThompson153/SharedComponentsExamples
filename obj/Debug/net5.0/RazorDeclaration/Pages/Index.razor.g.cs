@@ -108,11 +108,14 @@ using SharedComponents;
 #line 19 "F:\Projects\SharedComponentsExamples\Pages\Index.razor"
       
 	private string _dzClass = "";
+	private string _dzText = "";
 
 	private IEnumerable<DragAndDropItem> _itemPool;
 
 	protected override async Task OnInitializedAsync()
 	{
+		_dzText = "Drop Here";
+
 		_itemPool = new List<DragAndDropItem>
 		{
 			new DragAndDropItem
@@ -128,9 +131,16 @@ using SharedComponents;
 		};
 	}
 
-	private void dragOver() => _dzClass = "bg-primary";
+	private void dragOver()
+	{
+		_dzClass = "bg-primary";
+	}
 
-	private void dragLeave() => _dzClass = "";
+	private void dragLeave()
+	{
+		_dzClass = "";
+		_dzText = "";
+	}
 
 	private void drop(DragAndDropItem tgt)
 	{
@@ -141,15 +151,7 @@ using SharedComponents;
 		_itemPool = itemPool;
 
 		_dzClass = "";
-	}
-
-	private void replaceItem(DragAndDropItem tgt)
-	{
-		var itemPool = _itemPool.ToList();
-
-		itemPool.Remove(tgt);
-
-		_itemPool = itemPool;
+		_dzText = "";
 	}
 
 #line default

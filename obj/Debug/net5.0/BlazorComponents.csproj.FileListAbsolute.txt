@@ -657,7 +657,6 @@ F:\Projects\SharedComponentsExamples\obj\Debug\net5.0\BlazorComponents.pdb
 F:\Projects\SharedComponentsExamples\bin\Debug\net5.0\wwwroot\_framework\blazor.boot.json
 F:\Projects\SharedComponentsExamples\bin\Debug\net5.0\BlazorComponents.StaticWebAssets.xml
 F:\Projects\SharedComponentsExamples\bin\Debug\net5.0\BlazorComponents.dll
-F:\Projects\SharedComponentsExamples\bin\Debug\net5.0\ref\BlazorComponents.dll
 F:\Projects\SharedComponentsExamples\bin\Debug\net5.0\BlazorComponents.pdb
 F:\Projects\SharedComponentsExamples\bin\Debug\net5.0\wwwroot\_framework\BlazorComponents.dll
 F:\Projects\SharedComponentsExamples\bin\Debug\net5.0\wwwroot\_framework\BlazorComponents.pdb
@@ -1260,3 +1259,4 @@ F:\Projects\SharedComponentsExamples\obj\Debug\net5.0\staticwebassets\BlazorComp
 F:\Projects\SharedComponentsExamples\obj\Debug\net5.0\BlazorComponents.RazorTargetAssemblyInfo.cache
 F:\Projects\SharedComponentsExamples\obj\Debug\net5.0\BlazorComponents.csproj.CopyComplete
 F:\Projects\SharedComponentsExamples\bin\Debug\net5.0\SharedComponents.StaticWebAssets.xml
+F:\Projects\SharedComponentsExamples\obj\Debug\net5.0\refint\BlazorComponents.dll
