@@ -107,7 +107,7 @@ using SharedComponents;
 #nullable restore
 #line 19 "F:\Projects\SharedComponentsExamples\Pages\Index.razor"
       
-	private string _dzClass = "";
+	private string _dzClass = "bg-light";
 	private string _dzText = "";
 
 	private IEnumerable<DragAndDropItem> _itemPool;
