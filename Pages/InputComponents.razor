@@ -3,7 +3,7 @@
 <h3>Input Components</h3>
 
 <div class="row">
-	<Input Label="Dropdown Input" Type="InputTypes.Dropdown">
+	<Input Type="InputTypes.Dropdown" Name="dropdown_example" Label="Dropdown Input" Callback="((e) => inputCallback(e))">
 		<Content>
 			@foreach(var item in _dropdownItems)
 			{
@@ -19,14 +19,19 @@
 
 <div class="row">
 	<Input Label="Checkbox Input" Type="InputTypes.CheckBox" Name="checkbox" />
+</div>*@
+
+
+<div class="row">
+	<Input Name="text_input_example" Label="Text Input" MaxLength="10" Callback="((e) => inputCallback(e))" />
 </div>
 
 <div class="row">
-	<Input Label="Text Input" />
-</div>*@
+	<Input Name="text_input_with_timeout_example" Label="Text Input" MaxLength="10" Timeout="1500" Callback="((e) => inputCallback(e))" />
+</div>
 
 <div class="row">
-	<Input Label="Number Input" Type="InputTypes.Number" />
+	<Input Type="InputTypes.Number" Name="number_input_example" Label="Number Input" MaxLength="10" Callback="((e) => inputCallback(e))" />
 </div>
 
 @code {
@@ -46,5 +51,10 @@
 	protected override async Task OnAfterRenderAsync(bool firstRender)
 	{
 		await base.OnAfterRenderAsync(firstRender);
+	}
+
+	private void inputCallback(object val)
+	{
+		var meh = val;
 	}
 }
