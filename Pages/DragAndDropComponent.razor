@@ -1,0 +1,64 @@
+﻿@page "/draganddrop"
+
+<div class="row">
+	<div class="item-pool col-6">
+		@foreach(var item in _itemPool)
+		{
+			<DropItem Item="@item" />
+		}
+	</div>
+
+	<div class="col-6 p-0" style="min-height: 100px; height: 100px;">
+		<DropZone Class="@($"border border-dark {_dzClass}")" Text="@_dzText" DragOver="dragOver" DragLeave="dragLeave" Drop="drop" />
+	</div>
+	
+</div>
+
+@code{
+	private string _dzClass = "bg-light";
+	private string _dzText = "";
+
+	private IEnumerable<DragAndDropItem> _itemPool;
+
+	protected override async Task OnInitializedAsync()
+	{
+		_dzText = "Drop Here";
+
+		_itemPool = new List<DragAndDropItem>
+		{
+			new DragAndDropItem
+			{
+				Id = 1,
+				Title = "First Item"
+			},
+			new DragAndDropItem
+			{
+				Id = 2,
+				Title = "Second Item",
+			}
+		};
+	}
+
+	private void dragOver()
+	{
+		_dzClass = "bg-primary";
+	}
+
+	private void dragLeave()
+	{
+		_dzClass = "";
+		_dzText = "";
+	}
+
+	private void drop(DragAndDropItem tgt)
+	{
+		var itemPool = _itemPool.ToList();
+
+		itemPool.Remove(tgt);
+
+		_itemPool = itemPool;
+
+		_dzClass = "";
+		_dzText = "";
+	}
+}
